@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "83b145e0-692d-46f7-bcb8-83cc5731a950",
+		"name": "Hyperledger Fabric- Latest Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ASSET ROUTES",
+			"item": [
+				{
+					"name": "CREATE ASSET",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": \"ASSET-19\",\n    \"color\": \"red\",\n    \"size\": 31,\n    \"appraisedValue\": 26\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/assets?userID=maxPayne",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"assets"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": "maxPayne"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ASSET BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": \"ASSET-10\",\n    \"color\": \"red\",\n    \"size\": 114,\n    \"appraisedValue\": 918\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/assets/ASSET-10?userID=maxPayne",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"assets",
+								"ASSET-10"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": "maxPayne"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL ASSETS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": \"ASSET-10\",\n    \"color\": \"red\",\n    \"size\": 114,\n    \"appraisedValue\": 918\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/assets?userID=maxPayne",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"assets"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": "maxPayne"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ENROLLMENT ROUTES",
+			"item": [
+				{
+					"name": "ENROLL ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/enrollAdmin",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"enrollAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/registerUser?userID=maxPayne",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"registerUser"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": "maxPayne"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
